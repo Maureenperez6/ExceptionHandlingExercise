@@ -17,7 +17,7 @@ namespace ExceptionHandlingExercise
             // Below we will set this up 
             // ------------------------------------------------------------------------------
             var arr = new char[] { '1', '2', '3', '4', '5', '6', 'a', 'b', 'c' };
-            var numbers = new List<char>() { '1', '2', '3', '4', '5', '6' };
+            var numbers = new List<int>();
             var str = "";
 
 
@@ -39,7 +39,7 @@ namespace ExceptionHandlingExercise
                     str = item.ToString();
                     number = int.Parse(str);
 
-                    numbers.Add((char)number);
+                    numbers.Add(number);
 
                 }
                 catch (Exception ex)
