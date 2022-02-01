@@ -33,18 +33,22 @@ namespace ExceptionHandlingExercise
                 // set your string variable to each array element in your char[] to .ToString()
                 // Now, using int.Parse, parse your string variable and store in an int variable
                 // Then add each int to your list
-
+                int number;
                 try
                 {
                     str = item.ToString();
-                    var number = int.Parse(str);
+                    number = int.Parse(str);
 
-                    numbers.Add(item);
+                    numbers.Add((char)number);
 
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Unable to Parse '{arr}'");
+                }
+                finally
+                {
+                    Console.WriteLine(item);
                 }
             }
 
