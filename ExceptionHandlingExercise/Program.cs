@@ -25,6 +25,7 @@ namespace ExceptionHandlingExercise
             //TODO START HERE:
 
             // Make a foreach loop to iterate through your character array
+            int number;
             foreach (var item in arr)
             {
 
@@ -33,7 +34,7 @@ namespace ExceptionHandlingExercise
                 // set your string variable to each array element in your char[] to .ToString()
                 // Now, using int.Parse, parse your string variable and store in an int variable
                 // Then add each int to your list
-                int number;
+                
                 try
                 {
                     str = item.ToString();
@@ -44,12 +45,10 @@ namespace ExceptionHandlingExercise
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Unable to Parse '{arr}'");
+                    Console.WriteLine($"Unable to Parse '{item}'");
+                    Console.WriteLine($"{ex.Message}");
                 }
-                finally
-                {
-                    Console.WriteLine(item);
-                }
+         
             }
 
             foreach (var num in numbers)
